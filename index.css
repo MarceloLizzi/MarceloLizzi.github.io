@@ -1,0 +1,365 @@
+/* Basic Style */
+
+body {
+    background: #fff;
+    color: #333;
+    font-family: Lato, sans-serif;
+    background-color:#0084ff;
+    font-family: 'Lato', sans-serif;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+  
+  .container {
+    display: block;
+    width: 400px;
+    margin: 40px auto 0px;
+    background-color:#fff;
+    padding:0px 10px 10px 10px;
+    border-radius:10px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+  }
+  
+  h2 {
+    text-align:center;
+    padding-top:10px;
+    margin-bottom:0px;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li * {
+    float: left;
+  }
+  
+  li,
+  h3 {
+    clear: both;
+    list-style: none;
+  }
+  
+  input,
+  button {
+    outline: none;
+  }
+  
+  button {
+    background: none;
+    border: 0px;
+    color: #78ec74;
+    font-size: 15px;
+    width: 60px;
+    margin: 10px 0 0;
+    font-family: Lato, sans-serif;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    color: #0084ff;
+  }
+  
+  .editar{
+    color: #7bbaf5;
+  }
+  .editar:hover{
+    color:  #0084ff;
+    
+  }
+  .borrar{
+    color: #ff7878;
+  }
+  .borrar:hover{
+    color: #df0000;
+  }
+  
+  /* Heading */
+  
+  h3,
+  label[for='new-task'] {
+    color: #333;
+    font-weight: 700;
+    font-size: 15px;
+    border-bottom: 2px solid #333;
+    padding: 20px 0 10px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  input[type="text"] {
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    font-family: Lato, sans-serif;
+    color: #888;
+  }
+  
+  input[type="text"]:focus {
+    color: #333;
+  }
+  
+  
+  /* New Task */
+  
+  label[for='new-task'] {
+    display: block;
+    margin: 0 0 20px;
+  }
+  
+  input#new-task {
+    float: left;
+    width: 318px;
+    border-color: #474747;
+  }
+  
+  p > button:hover {
+    color: #00be0a;
+  }
+  
+  
+  /* Task list */
+  
+  li {
+    overflow: hidden;
+    padding: 20px 0;
+    border-bottom: 1px solid #727272;
+  }
+  
+  li > input[type="checkbox"] {
+    margin: 0 10px;
+    position: relative;
+    top: 15px;
+  }
+  
+  li > label {
+    font-size: 18px;
+    line-height: 40px;
+    width: 237px;
+    padding: 0 0 0 11px;
+  }
+  
+  li > input[type="text"] {
+    width: 226px;
+  }
+  
+  li > .borrar:hover {
+    color: #df0000;
+  }
+  
+  
+  /* Completed */
+  
+  #completed-tasks label {
+    text-decoration: line-through rgb(155, 26, 26);
+    color: #888;
+  }
+  
+  
+  /* Edit Task */
+  
+  ul li input[type=text] {
+    display: none;
+  }
+  
+  ul li.editMode input[type=text] {
+    display: block;
+  }
+  
+  ul li.editMode label {
+    display: none;
+  }
+
+  /* footer */
+
+ 
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.contacto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  color: #202020;
+}
+.material-symbols-outlined{
+    color: #ffffff;
+}
+
+
+
+
+
+
+*:focus,
+*:active {
+outline: none !important;
+-webkit-tap-highlight-color: transparent;
+}
+
+
+.wrapper {
+display: inline-flex;
+list-style: none;
+}
+
+.wrapper .icon {
+position: relative;
+background: #ffffff;
+border-radius: 50%;
+padding: 15px;
+margin: 10px;
+width: 50px;
+height: 50px;
+font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+cursor: pointer;
+transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+position: absolute;
+top: 0;
+font-size: 14px;
+background: #ffffff;
+color: #ffffff;
+padding: 5px 8px;
+border-radius: 5px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+opacity: 0;
+pointer-events: none;
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+position: absolute;
+content: "";
+height: 8px;
+width: 8px;
+background: #ffffff;
+bottom: -3px;
+left: 50%;
+transform: translate(-50%) rotate(45deg);
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+top: -45px;
+opacity: 1;
+visibility: visible;
+pointer-events: auto;
+
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+background: #1877F2;
+color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+background: #1DA1F2;
+color: #ffffff;
+}
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+background: #E4405F;
+color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+background: #333333;
+color: #ffffff;
+}
+path:hover{
+color: #ffffff;
+}
+a{
+color: #000;
+}
+a:hover{
+color:white
+}
+footer{
+padding-bottom: 0%;
+margin-bottom: 0;
+}
+.noselect {
+
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+  user-select: none;
+-webkit-tap-highlight-color: transparent;
+
+}
+
+.noselect {
+width: 50px;
+height: 50px;
+cursor: pointer;
+background-color: #ffffff;
+border-radius: 50%;
+transition: 200ms;
+border-color: #ffffff;
+
+
+}
+
+
+
+.noselect:hover {
+box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+width: 50px;
+height: 50px;
+background-color: #000;
+
+}
+
+.noselect:hover::before {
+color: #fff;
+}
+
+.noselect:hover i {
+/*animation: bounce 2s infinite linear;*/
+color: #ffffff;
+
+}
+
+@keyframes bounce {
+0% {transform: translateX(-50%) translateY(-50%)}
+25% {transform: translateX(-50%) translateY(-65%)}
+50% {transform: translateX(-50%) translateY(-50%)}
+75% {transform: translateX(-50%) translateY(-35%)}
+100% {transform: translateX(-50%) translateY(-50%)}
+}
+
